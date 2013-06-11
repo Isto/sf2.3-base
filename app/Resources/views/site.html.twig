@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie6"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie6"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js ie6"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html dir="ltr" lang="fr-FR" class="no-js"> <!--<![endif]-->
+    <head>
+        <!--[if IE]><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><![endif]-->
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <script src="http://www.modernizr.com/downloads/modernizr.js"></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body role="document">
+        <div id="container">
+            <div id="header" role="banner">
+                {% block logo %}{% endblock %}
+            </div><!-- #header -->
+            <div id="content">
+                {% block main %}{% endblock %}
+                {% block aside %}{% endblock %}
+            </div><!-- #content -->
+            <div id="footer" role="contentinfo">
+                
+            </div><!-- #footer -->
+        </div><!-- #container -->
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

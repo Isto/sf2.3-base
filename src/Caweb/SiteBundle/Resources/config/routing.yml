@@ -1,0 +1,3 @@
+site_home:
+    path: /
+    defaults: { _controller: CawebSiteBundle:Index:index }

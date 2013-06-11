@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie6"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie6"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js ie6"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html dir="ltr" lang="fr-FR" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <script src="http://www.modernizr.com/downloads/modernizr.js"></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta name="robots" content="noindex,nofollow">
+    </head>
+    <body role="document">
+        <div id="admin-container">
+            <div id="admin-bar" class="clearfix" role="navigation">
+                <a href="{{ path('site_home') }}">Allez sur le site</a>
+                <div class="right">
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+                
+            <div id="admin-aside" class="left" role="navigation">
+                <ul id="dashboard">
+                    <li><a href="{{ path('admin_dashboard') }}">Tableau de bord</a></li>
+                </ul>
+            </div><!-- #nav -->
+            
+            <div id="admin-content">
+                <div id="admin-main" role="main">
+                    {% block main %}{% endblock %}
+                </div><!-- #main -->
+            </div><!-- #content -->
+            
+            
+            <div id="admin-footer">
+                <div id="admin-version" class="right clearfix">Version 1.0</div>
+            </div>
+        </div><!-- #container -->
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
